@@ -1,0 +1,5 @@
+Host valentinvieriu.github.com
+	User git
+	Hostname github.com
+	PreferredAuthentications publickey
+	IdentityFile /Users/valentinvieriu/.ssh/valentinvieriu.pub

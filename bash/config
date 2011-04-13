@@ -1,0 +1,16 @@
+#GIT autocomplete
+source ~/dotfiles/git/git-completion.bash
+GIT_PS1_SHOWDIRTYSTATE=true
+
+#Setting the prompt
+
+#Normal Prompt
+#PS1='\u@\h \W$(__git_ps1)\$ '
+
+#Color prompt 
+#PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]$(__git_ps1) \$ \[\e[m\]\[\e[0;32m\]'
+
+#maxogden style https://gist.github.com/360864
+PS1='\[\033[36m\]\W\[\033[m\] $(__git_ps1 "(\[\033[32m\]%s\[\033[m\]) ")\[\033[31m\]→\[\033[m\] '
+
+

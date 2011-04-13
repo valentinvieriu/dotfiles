@@ -1,0 +1,12 @@
+export EDITOR="edit -w"
+export SVN_EDITOR="edit -w"
+export GIT_EDITOR="edit -w"
+#Set Paths
+export PATH="/usr/local/bin:${PATH}"
+export PATH="/usr/local/share/npm/bin:${PATH}"
+#For Node.js
+export NODE_PATH="/usr/local/lib/node"
+#History hack
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
