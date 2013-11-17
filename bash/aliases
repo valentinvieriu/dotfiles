@@ -3,8 +3,8 @@ alias h=history
 #those are for mac only
 alias tu="top -o cpu"   # CPU
 alias tm="top -o vsize" # memory
-alias ra="source ~/dotfiles/bash/aliases" # reload aliases
-alias ea="mate -w ~/dotfiles/bash/aliases && ra" # edit aliases
+alias ra="source ~/bin/dotfiles/bash/aliases" # reload aliases
+alias ea="mate -w ~/bin/dotfiles/bash/aliases && ra" # edit aliases
 alias cdtm="cd ~/'Library/Application Support/TextMate/Bundles/'"
 alias retm="osascript -e 'tell app \"TextMate\" to reload bundles'"
 #end mac only

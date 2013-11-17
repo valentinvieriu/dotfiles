@@ -1,9 +1,10 @@
-export EDITOR="edit -w"
-export SVN_EDITOR="edit -w"
-export GIT_EDITOR="edit -w"
+export EDITOR="subl -w"
+export SVN_EDITOR="subl -w"
+export GIT_EDITOR="subl -w"
 #Set Paths
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/share/npm/bin:${PATH}"
+export PATH="~/bin:${PATH}"
 #For Node.js
 export NODE_PATH="/usr/local/lib/node"
 #History hack
