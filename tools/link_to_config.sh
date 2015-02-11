@@ -3,7 +3,7 @@
 # this file is used to link the config files to the root home folderfolder
 
 DESTINATION_FOLDER=$HOME #please edit this to point to your folder
-DOTFILES_FOLDER=$HOME/dotfiles
+DOTFILES_FOLDER=$HOME/bin/dotfiles
 
 ln -s $DOTFILES_FOLDER/bash/bash_profile $DESTINATION_FOLDER/.bash_profile
 ln -s $DOTFILES_FOLDER/bash/bashrc $DESTINATION_FOLDER/.bashrc
