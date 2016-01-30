@@ -25,3 +25,8 @@ function gbt () {
 	git branch --track $2 $1/$2
 	git checkout $2
 }
+
+#bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi

@@ -1,12 +1,33 @@
 export EDITOR="subl -w"
 export SVN_EDITOR="subl -w"
 export GIT_EDITOR="subl -w"
+
 #Set Paths
 export PATH="/usr/local/bin:${PATH}"
+export PATH="/usr/local/heroku/bin:${PATH}"
 export PATH="/usr/local/share/npm/bin:${PATH}"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="~/bin:${PATH}"
+
 #For Node.js
 export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+#next line is for npm-check -g -u
+export PREFIX="/usr/local/"
+
+#for Andorid
+export PATH="~/Documents/android-sdk-macosx/tools:${PATH}"
+export PATH="~/Documents/android-sdk-macosx/platform-tools:${PATH}"
+
+#for new PHP
+
+#for Java
+export JAVA_HOME=export JAVA_HOME=$(/usr/libexec/java_home)
+export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
+
+#for Slimmerjs
+#export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
+
 #History hack
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
