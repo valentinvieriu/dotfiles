@@ -25,6 +25,56 @@ function gbt () {
 	git branch --track $2 $1/$2
 	git checkout $2
 }
+#For Visual Studio Code
+function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
+
+#for Docker
+function dclean() {
+	docker rmi -f $(docker images -q -a -f dangling=true)
+	docker volume rm $(docker volume ls -q -f dangling=true)
+}
+function dmssh {
+	docker-machine ssh $@
+}
+function dmscp {
+	docker-machine scp $@
+}
+function dme {
+	eval "$(docker-machine env $1)"
+}
+function dml {
+	docker-machine ls $@
+}
+function dcb {
+	docker-compose build $@
+}
+function dcbc {
+	docker-compose build --force-rm --no-cache $@
+}
+function dcu {
+	docker-compose up --remove-orphans $@
+}
+function dcup {
+	docker-compose up --remove-orphans --no-deps -d $@
+}
+function dcd {
+	docker-compose down -v --remove-orphans $@
+}
+function dcr {
+	docker-compose run --rm --service-ports $@
+}
+function dcres {
+	docker-compose restart $@
+}
+function dcp {
+	docker-compose push $@
+}
+function dcpull {
+	docker-compose pull $@
+}
+function dcl {
+	docker-compose logs -f --tail 100 $@
+}
 
 #bash_completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then

@@ -1,6 +1,5 @@
-#GIT autocomplete
-source ~/bin/dotfiles/git/git-completion.bash
-GIT_PS1_SHOWDIRTYSTATE=true
+# For bash-completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 #Setting the prompt
 
