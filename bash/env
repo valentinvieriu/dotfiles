@@ -1,37 +1,28 @@
-export EDITOR="subl -w"
-export SVN_EDITOR="subl -w"
-export GIT_EDITOR="subl -w"
+export EDITOR="code"
+export GIT_EDITOR="code"
+export SHELL=/usr/bash
 
 #Set Paths
 export PATH="/usr/local/bin:${PATH}"
-export PATH="/usr/local/heroku/bin:${PATH}"
 export PATH="/usr/local/share/npm/bin:${PATH}"
 export PATH="/usr/local/sbin:${PATH}"
 export PATH="~/bin:${PATH}"
-#for newer openssl
-export PATH=$(brew --prefix openssl)/bin:$PATH
 
 #For Node.js
 export PATH="node_modules/.bin:${PATH}"
-export NODE_PATH="/usr/local/lib/node"
-export NODE_PATH=${NODE_PATH}:/usr/local/lib/node_modules
-#next line is for npm-check -g -u
-export PREFIX="/usr/local/"
+export NODE_PATH=/usr/local/lib/node_modules:${NODE_PATH}
+#to use node8
+#export PATH=/usr/local/opt/node@8/bin:${PATH}
+#to use node4
+#export PATH=/usr/local/opt/node@4/bin:${PATH}
 
-#for docker-machine
-#export DOCKER_TLS_VERIFY="1"
-#export DOCKER_HOST="tcp://192.168.99.100:2376"
-#export DOCKER_CERT_PATH="/Users/vvieri/.docker/machine/machines/docker-machine"
-#export DOCKER_MACHINE_NAME="docker-machine"
+#for Docker Machine Hetzner
+export GOPATH=$(go env GOPATH)
+export GOBIN=$GOPATH/bin
+export PATH="${PATH}:$GOBIN"
 
-#for visual code studio
-#export VSCODE_TSJS=1
-
-#for Java
-export JAVA_HOME=export JAVA_HOME=$(/usr/libexec/java_home)
-export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
 
 #History hack
 export HISTCONTROL=erasedups
-export HISTSIZE=10000
+export HISTSIZE=100000
 shopt -s histappend
